@@ -1,0 +1,128 @@
+@import "variables";
+@import "mixins";
+
+.lk-input {
+  input {
+    &[type=checkbox] {
+      display: none;
+    }
+  }
+
+  &.is-focused {
+    .lk-input {
+      &_border {
+        width: 100%;
+      }
+    }
+  }
+
+  &.is-focused,
+  &:not(.is-empty) {
+    .lk-input {
+      &_label {
+        top: 0;
+        left: 0;
+        opacity: .9;
+        font-size: 80%;
+      }
+    }
+  }
+
+  &.is-invalid {
+    .lk-input {
+      &_border {
+        width: 100%;
+        background-color: $red;
+      }
+
+      &_guidance-text {
+        display: none;
+      }
+
+      &_error {
+        display: block;
+      }
+    }
+  }
+
+  &.is-checkbox,
+  &.is-textarea {
+    .lk-input_footer {
+      padding-top: 4px;
+      border-top: none;
+    }
+
+    .lk-input_border {
+      display: none;
+    }
+  }
+
+  &.is-checkbox {
+    .lk-input_label {
+      display: none;
+    }
+  }
+
+  &_field,
+  &_label {
+    position: relative;
+    z-index: 2;
+  }
+
+  &_label {
+    z-index: 1;
+    top: 23px;
+    left: 7px;
+    opacity: .6;
+    font-size: 100%;
+
+    @include lk-transition(all .1s linear);
+
+    small {
+      color: $red;
+      position: relative;
+      top: -2px;
+      left: 2px;
+    }
+  }
+
+  &_footer {
+    border-top: 1px solid $l-gray;
+    position: relative;
+    margin-top: -2px;
+    line-height: 1;
+  }
+
+  &_border {
+    height: 2px;
+    width: 0;
+    background-color: $l-blue;
+    position: relative;
+    top: -2px;
+
+    @include lk-transition(width .2s linear);
+  }
+
+  &_guidance-text {
+    display: block;
+    color: $l-gray;
+  }
+
+  &_error {
+    color: $red;
+    display: none;
+  }
+
+  .fa-check-square,
+  .fa-square-o {
+    font-size: 120%;
+    top: 1px;
+  }
+
+  label {
+    a {
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+}

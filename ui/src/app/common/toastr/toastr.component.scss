@@ -1,0 +1,60 @@
+@import "variables";
+@import "mixins";
+@import "keyframes";
+
+.lk-toastr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  height: 0;
+
+  &_box {
+    position: relative;
+    top: -300px;
+    padding: 20px;
+    color: $white;
+    opacity: .9;
+
+    @include lk-box-shadow();
+    @include lk-transition(top .5s);
+
+    &.is-success {
+      background-color: $green;
+    }
+
+    &.is-info {
+      background-color: $blue;
+    }
+
+    &.is-warning {
+      background-color: $orange;
+    }
+
+    &.is-error {
+      background-color: $red;
+    }
+  }
+
+  &_title {
+    margin-bottom: 5px;
+  }
+
+  &_message {
+    margin-bottom: 0;
+  }
+
+  .lk-close {
+    float: right;
+    padding-left: 20px;
+  }
+
+  &.is-active {
+    .lk-toastr {
+      &_box {
+        top: 0;
+      }
+    }
+  }
+}

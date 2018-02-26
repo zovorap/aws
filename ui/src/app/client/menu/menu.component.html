@@ -1,0 +1,59 @@
+<div
+  class="lk-client-menu lk-brand-background"
+  [ngClass]="{
+    'is-expanded': (menu$ | async)?.isExpanded
+  }"
+>
+  <div [ngSwitch]="!!clientId">
+    <h4
+      *ngSwitchCase="true"
+      class="lk-client-menu_label"
+      [title]="clientName"
+      lkToggle="client.menu"
+    >
+      <i class="fa fa-user-o" aria-hidden="true"></i>
+      <span>{{ clientName }}</span>
+    </h4>
+
+    <h4
+      *ngSwitchDefault
+      class="lk-client-menu_label"
+      [title]="clientName"
+      (click)="showLoginModal()"
+    >
+      <i class="fa fa-user-o" aria-hidden="true"></i>
+      <span>{{ clientName }}</span>
+    </h4>
+  </div>
+
+  <ul class="lk-client-menu_list lk-brand-background is-transparent">
+    <li
+      *ngFor="let menuItem of (menu$ | async)?.items"
+      [ngSwitch]="menuItem.id === 'logout'"
+      class="lk-client-menu_item"
+    >
+      <span
+        *ngSwitchCase="true"
+        (click)="logout()"
+      >
+        <i
+          class="fa"
+          [ngClass]="'fa-' + menuItem.icon"
+        ></i>
+        {{ menuItem.label }}
+      </span>
+
+      <a
+        *ngSwitchDefault
+        [routerLink]="menuItem.url"
+        [routerLinkActive]=""
+      >
+        <i
+          class="fa"
+          [ngClass]="'fa-' + menuItem.icon"
+        ></i>
+        {{ menuItem.label }}
+      </a>
+    </li>
+  </ul>
+</div>

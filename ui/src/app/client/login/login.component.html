@@ -1,0 +1,53 @@
+<div class="lk-client-login">
+  <lk-form
+    id="loginForm"
+    [formGroup]="form"
+    (submit)="login()"
+  >
+    <lk-input
+      [field]="email"
+      autofocus
+    ></lk-input>
+
+    <div class="v-space-10"></div>
+
+    <lk-input [field]="password"></lk-input>
+
+    <div class="v-space-20"></div>
+
+    <div class="font-bold cf">
+      <div class="pull-left">
+        <lk-input [field]="rememberMe"></lk-input>
+      </div>
+
+      <div class="pull-right">
+        <div
+          class="lk-client-login_forgot"
+          (click)="openForgotPasswordModal()"
+        >Forgot password?</div>
+      </div>
+    </div>
+
+    <div *ngIf="!!apiErrorMessage">
+      <div class="v-space-20"></div>
+
+      <div class="lk-error-box">{{ apiErrorMessage }}</div>
+    </div>
+
+    <div class="v-space-40"></div>
+
+    <div class="cf">
+      <lk-submit
+        label="Log In"
+        cssClass="lk-brand-btn btn-primary block-sm pull-left"
+      ></lk-submit>
+
+      <div class="lk-client-login_register pull-right">
+        Not a Member Yet?
+
+        <span (click)="openRegisterModal()">Create an Account</span>
+      </div>
+    </div>
+  </lk-form>
+
+</div>

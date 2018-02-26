@@ -1,0 +1,35 @@
+<div class="lk-app">
+  <div *ngIf="hasBranding">
+    <div class="lk-app_content">
+      <lk-toastr></lk-toastr>
+
+      <lk-header></lk-header>
+
+      <lk-toolbar></lk-toolbar>
+
+      <main>
+        <div class="container">
+          <router-outlet></router-outlet>
+        </div>
+      </main>
+
+      <lk-footer></lk-footer>
+
+      <lk-modal></lk-modal>
+    </div>
+
+    <div
+      class="lk-app_background"
+      [ngStyle]="{
+        'background-color': (footerBackgroundColor$ | async)
+      }"
+    >&nbsp;</div>
+  </div>
+
+  <div *ngIf="isBrandingError">
+    TODO:<br>
+    Branding error!!!!!!!!!!!!
+  </div>
+
+  <lk-silk-screen></lk-silk-screen>
+</div>

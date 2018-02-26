@@ -1,0 +1,11 @@
+@import 'variables';
+
+.lk-form {
+  &.ng-invalid {
+    [type=submit] {
+      &.is-active {
+        animation: shake 500ms linear;
+      }
+    }
+  }
+}

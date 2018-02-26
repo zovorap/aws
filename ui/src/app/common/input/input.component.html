@@ -1,0 +1,67 @@
+<div
+  class="lk-input"
+  [ngClass]="cssClass"
+>
+  <label
+    class="lk-input_label"
+    [innerHTML]="field.label"
+  ></label>
+
+  <textarea
+    *ngIf="isTextarea"
+    #input
+    class="lk-input_textarea"
+    [formControl]="field.control"
+    (focus)="setFocused(true)"
+    (blur)="setFocused(false)"
+  ></textarea>
+
+  <input
+    *ngIf="isTypingInput"
+    #input
+    class="lk-input_field"
+    [type]="field.type"
+    [formControl]="field.control"
+    (focus)="setFocused(true)"
+    (blur)="setFocused(false)"
+  >
+
+  <label
+    *ngIf="isCheckbox"
+    class="lk-input_checkbox"
+  >
+    <input
+      [type]="field.type"
+      [checked]="field.value"
+      (change)="toggleValue()"
+    >
+
+    <i
+      class="fa"
+      [ngClass]="field.control.value ? 'fa-check-square lk-brand-text' : 'fa-square-o'"
+    ></i>
+
+    <span [innerHTML]="field.label"></span>
+  </label>
+
+  <div class="lk-input_footer">
+    <div class="lk-input_border">&nbsp;</div>
+
+    <small [ngSwitch]="!!isInvalid">
+      <span
+        *ngSwitchCase="true"
+        class="lk-input_error"
+      >
+        {{ errorMessage }}
+      </span>
+
+      <span *ngSwitchDefault>
+        <span
+          *ngIf="!!field.guidanceText"
+          class="lk-input_guidance-text"
+          [innerHTML]="field.guidanceText"
+        ></span>
+      </span>
+    </small>
+  </div>
+</div>

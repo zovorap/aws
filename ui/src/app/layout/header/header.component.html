@@ -1,0 +1,54 @@
+<header
+  *ngIf="!!(sections$ | async)"
+  class="lk-header"
+  [ngClass]="getLayoutClass()"
+  [ngStyle]="{
+    'background-color': (backgroundColor$ | async),
+    color: getTextColor()
+  }"
+>
+  <div
+    *ngIf="isSectionVisible('logo')"
+    class="lk-header_logo"
+  >
+    <a
+      routerLink=""
+      [title]="siteName$ | async"
+    >
+      <img
+        [alt]="siteName$ | async"
+        [src]="logo$ | async"
+      />
+    </a>
+  </div>
+
+  <h1 class="lk-header_site-name">
+    <a
+      *ngIf="isSectionVisible('siteName')"
+      routerLink=""
+      [title]="siteName$ | async"
+    >{{ siteName$ | async }}</a>
+  </h1>
+
+  <h2
+    *ngIf="isSectionVisible('tagline')"
+    class="lk-header_tagline"
+  >
+    {{ (agent$ | async).tagline }}
+  </h2>
+
+  <div
+    *ngIf="isSectionVisible('phone')"
+    class="lk-header_phone"
+  >
+    <i class="fa fa-phone"></i>
+    {{ (agent$ | async).mainPhoneNumber }}
+  </div>
+
+  <div
+    *ngIf="isSectionVisible('email')"
+    class="lk-header_email"
+  >
+    {{ (agent$ | async).displayEmail }}
+  </div>
+</header>

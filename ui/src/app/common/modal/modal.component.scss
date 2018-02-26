@@ -1,0 +1,197 @@
+@import "variables";
+@import "mixins";
+
+.lk-modal {
+  z-index: 98;
+  display: none;
+  overflow-y: auto;
+  position: fixed;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &.is-active {
+    display: block;
+  }
+
+  &.is-visible {
+    .lk-modal {
+      &_silkscreen {
+        opacity: .8;
+      }
+
+      &_box {
+        top: 40%;
+        transform: translateY(-50%) translateX(-50%);
+
+        @media (max-width: #{$screen-xs}) {
+          top: 0;
+          transform: translateY(0) translateX(0);
+        }
+
+        &.lk-modal_register {
+          top: 50%;
+
+          @media (max-height: 720px) and (min-width: #{$screen-sm}) {
+            top: 0;
+            transform: translateY(0) translateX(-50%);
+          }
+
+          @media (max-width: #{$screen-xs}) {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &_box {
+    background-color: $white;
+    min-width: 400px;
+    width: 50%;
+    min-height: 100px;
+    top: -50%;
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+
+    @include lk-transition(top .3s);
+
+    @media (max-width: #{$screen-md}) {
+      width: 70%;
+    }
+
+    @media (max-width: #{$screen-sm}) {
+      width: 90%;
+    }
+
+    @media (max-width: #{$screen-xs}) {
+      width: 100%;
+      min-height: 100%;
+      min-width: auto;
+      top: 0;
+      left: 0;
+    }
+
+    &.is-small {
+      width: 30%;
+      padding: 30px;
+
+      @media (max-width: #{$screen-md}) {
+        width: 50%;
+      }
+
+      @media (max-width: #{$screen-sm}) {
+        width: 70%;
+      }
+
+      @media (max-width: #{$screen-xs}) {
+        width: 100%;
+      }
+    }
+
+    &.is-large {
+      width: 70%;
+
+      @media (max-width: #{$screen-md}) {
+        width: 80%;
+      }
+
+      @media (max-width: #{$screen-sm}) {
+        width: 90%;
+      }
+
+      @media (max-width: #{$screen-xs}) {
+        width: 100%;
+      }
+
+      &.lk-modal_content {
+        @media (max-width: #{$screen-sm}) {
+          padding: 30px;
+        }
+      }
+    }
+  }
+
+  &_content {
+    padding: 50px;
+
+    @media (max-width: #{$screen-sm}) {
+      padding: 30px;
+    }
+
+    @media (max-width: #{$screen-xs}) {
+      padding: 20px;
+    }
+  }
+
+  .lk-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+
+  &_header {
+    margin-bottom: 20px;
+
+    h4 {
+      margin-top: 10px;
+    }
+  }
+
+  &_footer {
+    button {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &_silkscreen {
+    position: fixed;
+    background-color: $black;
+    opacity: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+
+    @include lk-transition(opacity .3s);
+  }
+
+  &_register {
+    .lk-close {
+      color: $white;
+    }
+
+    &::after {
+      display: block;
+      content: " ";
+      background: url("/assets/images/register-modal-background.png") center center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 50%;
+      z-index: 1;
+    }
+
+    @media (max-width: #{$screen-lg}) {
+      &::after {
+        display: none;
+      }
+
+      .lk-close {
+        color: inherit;
+      }
+    }
+  }
+
+  &_thank-you {
+    background: url("/assets/images/thank-you-modal-background.png") center center;
+    background-size: cover;
+  }
+}

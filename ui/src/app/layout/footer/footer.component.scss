@@ -1,0 +1,192 @@
+@import "variables";
+@import "fonts";
+
+.lk-footer {
+  padding: 40px 0;
+
+  @extend .font-12;
+
+  &.is-bordered {
+    border-top: 1px solid $ll-gray;
+  }
+
+  &_content {
+    position: relative;
+  }
+
+  &_logo {
+    display: block;
+    text-align: left;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    img {
+      max-height: 80px;
+      max-width: 150px;
+    }
+
+    @media (max-width: $screen-md) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &_site-name,
+  &_social {
+    a,
+    a:hover,
+    a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      opacity: .9;
+    }
+  }
+
+  &_social {
+    text-align: right;
+
+    @extend .font-20;
+
+    li {
+      display: inline-block;
+      margin-left: 7px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      i.fa {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: $screen-md) {
+      text-align: center;
+    }
+  }
+
+  &_disclaimer,
+  &_equal-housing {
+    text-align: left;
+    opacity: .6;
+
+    @extend .font-12;
+  }
+
+  &_equal-housing {
+    height: 15px;
+
+    img {
+      height: 23px;
+    }
+
+    span {
+      display: inline-block;
+      position: relative;
+      top: 3px;
+      margin-left: 10px;
+    }
+  }
+
+  &.layout-a {
+    text-align: center;
+
+    .lk-footer {
+      &_site-name,
+      &_phone,
+      &_email {
+        display: inline;
+
+        &::after {
+          content: "\A";
+          white-space: pre;
+        }
+      }
+
+      &_agencies {
+        margin-bottom: 20px;
+      }
+
+      &_agency {
+        &_address {
+          white-space: pre;
+        }
+
+        &_name,
+        &_address,
+        &_phone {
+          display: block;
+        }
+
+        @media (max-width: $screen-md) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &.layout-b {
+    .lk-footer {
+      &_logo {
+        display: none;
+      }
+
+      &_site-name,
+      &_agencies {
+        margin-right: 20px;
+        display: inline-block;
+
+        @media (max-width: $screen-md) {
+          margin: 0;
+          display: block;
+          text-align: center;
+        }
+      }
+
+      &_agencies {
+        margin-bottom: 0;
+        position: relative;
+        top: 3px;
+
+        @media (max-width: $screen-md) {
+          margin-bottom: 10px;
+        }
+      }
+
+      &_agency {
+        width: 100%;
+
+        &_name,
+        &_address,
+        &_phone {
+          display: inline-block;
+          margin-right: 10px;
+
+          @media (max-width: $screen-md) {
+            display: block;
+          }
+        }
+
+        &_phone {
+          padding-left: 10px;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: "|";
+            left: -5px;
+
+            @media (max-width: $screen-md) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

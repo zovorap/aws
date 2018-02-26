@@ -1,0 +1,51 @@
+@import "variables";
+
+.lk-branding {
+  &_title {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid $orange;
+  }
+
+  &_toaster_link {
+    display: inline-block;
+    padding: 7px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+
+    &.is-info {
+      background-color: $blue;
+    }
+
+    &.is-success {
+      background-color: $green;
+    }
+
+    &.is-warning {
+      background-color: $orange;
+    }
+
+    &.is-error {
+      background-color: $red;
+    }
+  }
+
+  pre {
+    padding: 0 20px;
+    background-color: $lll-gray;
+    margin-top: 10px;
+    height: 250px;
+    overflow-y: auto;
+
+    code {
+      overflow: hidden;
+      display: block;
+      position: relative;
+      left: -15px;
+    }
+  }
+}

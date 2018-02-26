@@ -1,0 +1,5 @@
+export default {
+  ANIMATE_MODAL: 'ANIMATE_MODAL',
+  CLOSE_MODAL: 'CLOSE_MODAL',
+  OPEN_MODAL: 'OPEN_MODAL'
+};

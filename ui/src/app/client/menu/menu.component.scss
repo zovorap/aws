@@ -1,0 +1,70 @@
+@import "mixins";
+@import "variables";
+
+.lk-client-menu {
+  position: relative;
+  z-index: 2;
+
+  &_label {
+    padding: 14px;
+    cursor: pointer;
+
+    span {
+      @media (max-width: $screen-lg) {
+        display: none;
+      }
+    }
+
+    i {
+      display: inline-block;
+      font-size: 20px;
+      margin-top: -4px;
+
+      @media (max-width: $screen-lg) {
+        width: 10px;
+      }
+    }
+  }
+
+  &_list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 250px;
+    z-index: 2;
+
+    @include lk-box-shadow();
+  }
+
+  &_item {
+    display: block;
+
+    a,
+    span {
+      display: block;
+      line-height: 1;
+      padding: 15px;
+      cursor: pointer;
+
+      &,
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, .2);
+        padding-left: 20px;
+      }
+    }
+  }
+
+  &.is-expanded {
+    .lk-client-menu {
+      &_list {
+        display: block;
+      }
+    }
+  }
+}

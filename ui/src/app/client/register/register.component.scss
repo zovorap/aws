@@ -1,0 +1,54 @@
+@import "variables";
+
+.lk-register {
+  .lk-form {
+    @media (min-width: #{$screen-lg}) {
+      margin-right: 30px;
+    }
+  }
+
+  &_promo {
+    position: relative;
+    z-index: 2;
+    color: $white;
+    border: 1px solid $white;
+    padding: 75px 55px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+
+    .promo-title {
+      line-height: 1.4;
+      margin-bottom: 40px;
+    }
+
+    .promo-text {
+      li {
+        height: 60px;
+
+        &:last-child {
+          height: auto;
+        }
+      }
+
+      i {
+        display: inline-block;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  &_sign-in {
+    text-align: right;
+    margin-top: 30px;
+
+    span {
+      cursor: pointer;
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+}

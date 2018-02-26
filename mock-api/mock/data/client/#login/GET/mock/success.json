@@ -1,0 +1,39 @@
+{
+  "id": "aschwarzenegger@foo.bar",
+  "first_name": "Arnold",
+  "last_name": "Schwarzenegger",
+  "menu": [
+    {
+      "id": "savedSearches",
+      "url": "my-searches",
+      "label": "My Searches",
+      "icon": "search"
+    },
+
+    {
+      "id": "savedListings",
+      "url": "my-listings",
+      "label": "My Saved Listings",
+      "icon": "folder"
+    },
+
+    {
+      "id": "settings",
+      "url": "my-settings",
+      "label": "Settings",
+      "icon": "cog",
+      "is_popup": true
+    },
+
+    {
+      "id": "logout",
+      "url": "client-logout",
+      "label": "Log Out",
+      "icon": "power-off"
+    }
+  ],
+  "token": "lorEmiPsUmd0lorSitAmeT",
+  "settings": {
+    "send_matching_listings": true
+  }
+}

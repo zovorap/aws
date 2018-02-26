@@ -1,0 +1,185 @@
+{
+  "id": 5685,
+  "branding": {
+    "color": "#ff00ff",
+    "fonts": {
+      "font_a": "Cinzel:400,700",
+      "font_b": "Philosopher:400,400italic,700,700italic",
+      "heading": "Cinzel, serif",
+      "subHeading": "Philosopher, serif"
+    }
+  },
+
+  "header": {
+    "background_color": "white",
+    "logo": "https://s3.amazonaws.com/leadkit-agent-files-staging/img/agents/000/080/512/header_logo/silhouettenycempire-state-bldgus-1-1481295465.jpg",
+    "layout": "e",
+    "sections": [
+      "siteName",
+      "tagline",
+      "phone",
+      "email",
+      "logo"
+    ]
+  },
+
+  "footer": {
+    "background_color": "black",
+    "layout": "a",
+    "disclaimer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum vel arcu vitae semper. Morbi sed sollicitudin dolor, a sollicitudin ipsum. Nullam luctus accumsan sem. Donec tincidunt lacus quis imperdiet elementum. Vestibulum ante ligula, ultricies non sapien vitae, sodales dapibus felis. Fusce pellentesque tortor in velit imperdiet lobortis. Curabitur in tincidunt purus, sed efficitur nisi. Vivamus quis dictum nibh. Integer vitae euismod dolor. Mauris semper, leo id blandit accumsan, ex erat finibus nulla, quis imperdiet nunc mi sagittis nunc."
+  },
+
+  "agent_info": {
+    "description": "Real estate agent in New York specializing in luxury condos.",    
+    "tags": ["Real Estate", "luxury", "sales", "condo"],
+    "name_on_site": "Danny Davis",
+    "title": "Certified Real Estate Agent",
+    "tagline": "Downtown Luxury Property Specialist",
+    "main_phone_number": "844-789-9090",
+    "mobile_phone_number": "222-789-9090",
+    "office_phone_number": null,
+    "primary_email": "jasonkaradus@lk.com",
+    "display_email": "danny.davis@lk.com",
+    "secondary_display_email": "",
+    "office_address": "795 Seventh Street, Suite 200 West End, NYC, 10047",
+    "agency_logo": "https://s3.amazonaws.com/leadkit-agent-files-staging/img/agents/000/049/199/agency_logo/published/logo-white-1506954113.png",
+    "social_media": [
+      {
+        "type": "twitter",
+        "link": "https://twitter.com/@citihabitats"
+      },
+      {
+        "type": "facebook",
+        "link": "http://facebook.com/citihabitats"
+      },
+      {
+        "type": "linkedin",
+        "link": "http://www.linkedin.com/in/citihabitats"
+      },
+      {
+        "type": "google-plus",
+        "link": "https://plus.google.com/citihabitats"
+      },
+      {
+        "type": "pinterest",
+        "link": "https://pinterest.com/citihabitats"
+      },
+      {
+        "type": "instagram",
+        "link": "https://instagram.com/citihabitats"
+      }
+    ],
+    "markets": [
+      {
+        "id": 1,
+        "label": "New York City"
+      }
+    ],
+    "agencies": [
+      {
+        "name": "Real Estate Brokerage",
+        "phone": "212-999-9090",
+        "address": "275 7th Ave \nNew York, NY 10065"
+      }, {
+        "name": "foo",
+        "phone": "123-123-1234",
+        "address": "123 blah blah"
+      }, {
+        "name": "bar",
+        "phone": "5555555555",
+        "address": "34534 lorem ipsum"
+      }
+    ]
+  },
+
+  "nav": [
+    {
+      "url": "",
+      "label": "Home"
+    },
+    {
+      "url": "closed",
+      "label": "Closed Transactions"
+    },
+    {
+      "url": "about",
+      "label": "About"
+    },
+    {
+      "url": "press",
+      "label": "Press"
+    },
+    {
+      "url": "testimonials",
+      "label": "Testimonials"
+    },
+    {
+      "url": "search",
+      "label": "Search"
+    },
+    {
+      "url": "videos",
+      "label": "Videos"
+    },
+    {
+      "url": "blog",
+      "label": "Blog"
+    },
+    {
+      "url": "pages",
+      "label": "Pages",
+      "items": [
+        {
+          "url": "pages/foo",
+          "label": "It has survived not only five centuries"
+        },
+        {
+          "url": "pages/bar",
+          "label": "bar"
+        }
+      ]
+    },
+    {
+      "url": "listings",
+      "label": "My Listings"
+    },
+    {
+      "url": "list-with-me",
+      "label": "List With Me"
+    }
+  ],
+
+  "title": "Danny Davis",
+  "favicon": "http://www.iconarchive.com/download/i33540/yellowicon/game-stars/Mario.ico",
+
+  "default_domain": "newyorkleadkit.agent.reolservices.com",
+  "linked_domains": "",
+  "google_analytics_id": null,
+  "email_disclosure": null,
+  "js_embed_code": "",
+  "register_custom_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "list_with_me_custom_text": null,
+  "list_with_me_custom_title": "List With Me",
+  "register_custom_title": "Join Today!",
+  "menu_custom_page_dropdown": 0,
+  "custom_page_display": {
+    "search": false,
+    "contact": false,
+    "about": true
+  },
+  "testimonial_request_message": "When someone takes the time to recount a positive experience, it speaks volumes. And so I would like to request a small favour – a testimonial that will give others a sense of the experience and service I offer.\n\nThis testimonial can be as short or as long as you like. It is valuable to my future business and, just as importantly, allows me to continuously improve upon the level of service I provide. Feel free to either e-mail me or use the link below to share your thoughts on your experience with my company.\n\nI sincerely appreciate your help and look forward to servicing your needs for years to come.\n\nWarmest Regards.",
+  "testimonial_image": "https://s3.amazonaws.com/leadkit-agent-files-staging/img/agents/000/080/512/testimonial_image/745hero-1473706284-1486141339.jpg",
+  "client_invitation_message": "I have created an account for you on my website where you can view and save all listings. You can easily mark any property that you are interested in viewing. Edited",
+  "feed_url": "www.6sqft.com/feed",
+  
+  "updated_at": "2017-09-19T12:52:51+00:00",
+  "is_initial": false,
+  "layouts": [
+    {
+      "type": "register",
+      "option": "A"
+    }
+  ],
+  "ip": "69.70.29.147",
+  "configuration": null
+}

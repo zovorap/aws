@@ -1,0 +1,8 @@
+{
+  "for_sale": 1,
+  "include_closed_sale": 0,
+  "include_closed_rent": 0,
+  "for_rent": 1,
+  "display_order": "bedroom_count",
+  "contact_box_style": "team"
+}

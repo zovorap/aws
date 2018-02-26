@@ -1,0 +1,42 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+$black: #000;
+$dd-gray: #222;
+$d-gray: #3b3b3b;
+$gray: #4f4f4f;
+$l-gray: #6a6a6a;
+$ll-gray: #b1b1b1;
+$lll-gray: #f3f3f3;
+$white: #fff;
+
+$blue: #086ea1;
+$d-blue: #054c70;
+$l-blue: #05c3de;
+
+$orange: #ff6600;
+$red: #da291c;
+$green: #00843d;
+
+// $dd-blue: #11151a;
+// $teal: #008080;
+// $mustard: #daaa00;
+// $l-green: #dfeae3;
+
+//Bootstrap vars
+$font-size-base: 14px;
+$screen-min-width: 320px;
+$screen-xxs: 320px;
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+$screen-xxs-min: 0;
+$screen-xxs-max: ($screen-xs - 1);
+$screen-xs-min: $screen-xs;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-min: $screen-sm;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-min: $screen-md;
+$screen-md-max: ($screen-lg-min - 1);
+$screen-lg-min: $screen-lg;

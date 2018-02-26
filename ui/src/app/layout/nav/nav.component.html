@@ -1,0 +1,66 @@
+<nav class="lk-nav">
+  <div
+    class="lk-nav_burger-btn"
+    [ngClass]="{
+      'is-collapsed': !(isExpanded$ | async)
+    }"
+    lkToggle="nav"
+  >
+    <span class="lk-nav_burger-btn_icon v-align">
+      <span class="lk-nav_burger-btn_icon_bar">&nbsp;</span>
+      <span class="lk-nav_burger-btn_icon_bar">&nbsp;</span>
+      <span class="lk-nav_burger-btn_icon_bar">&nbsp;</span>
+    </span>
+
+    <span class="lk-nav_burger-btn_label">Menu</span>
+  </div>
+
+  <ul
+    class="lk-nav_list cf"
+    [ngClass]="{
+      'is-expanded': (isExpanded$ | async)
+    }"
+  >
+    <li
+      *ngFor="let navItem of (navItems$ | async); let i = index"
+      class="lk-nav_item"
+      [ngClass]="{
+        'is-active': navItem.isExpanded,
+        'lk-brand-background': navItem.isExpanded
+      }"
+      [ngSwitch]="!!navItem.items?.length"
+    >
+      <div *ngSwitchCase="true">
+        <span
+          class="lk-nav_label"
+          [lkToggle]="'nav.items[' + i + ']'"
+          (click)="keepMenuOpen($event)"
+          [title]="navItem.label"
+        >
+          {{ navItem.label }}
+          <span class="fa lk-nav_item_indicator"></span>
+        </span>
+
+        <ol class="lk-nav_submenu lk-brand-background is-transparent">
+          <li
+            *ngFor="let submenuItem of navItem.items"
+            class="lk-nav_submenu_item"
+            [title]="submenuItem.label"
+          >
+            <a
+              [routerLink]="[submenuItem.url]"
+              class="lk-nav_label"
+            >{{ submenuItem.label }}</a>
+          </li>
+        </ol>
+      </div>
+
+      <a
+        *ngSwitchDefault
+        [routerLink]="[navItem.url]"
+        class="lk-nav_label"
+        [title]="navItem.label"
+      >{{ navItem.label }}</a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+.font-family-default {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-bold {
+  font-weight: bold;
+  @extend .font-smoothing;
+}
+
+.font-normal {
+  font-weight: normal;
+  @extend .font-smoothing;
+}
+
+.font-light {
+  font-weight: lighter;
+  @extend .font-smoothing;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.font-30 {
+  font-size: 30px;
+}
+
+.font-48 {
+  font-size: 48px;
+}

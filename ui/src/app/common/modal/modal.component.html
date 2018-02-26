@@ -1,0 +1,78 @@
+<div
+  class="lk-modal"
+  tabindex="-1"
+  [ngClass]="{
+    'is-active': (modal$ | async)?.isActive,
+    'is-visible': (modal$ | async)?.isVisible
+  }"
+>
+  <div
+    class="lk-modal_box"
+    [ngClass]="(modal$ | async)?.cssClass"
+  >
+    <div
+      class="lk-close"
+      (click)="hide()"
+    ></div>
+
+    <div class="lk-modal_content">
+      <div class="lk-modal_header">
+        <h2
+          *ngIf="!!(modal$ | async)?.title"
+          [innerHTML]="(modal$ | async)?.title"
+        ></h2>
+      </div>
+
+      <div class="lk-modal_body">
+        <router-outlet
+          *ngIf="!!(modal$ | async)?.url"
+          name="modal"
+        ></router-outlet>
+
+        <div
+          *ngIf="!!(modal$ | async)?.tpl"
+          [innerHTML]="(modal$ | async)?.tpl"
+        ></div>
+      </div>
+
+      <div
+        *ngIf="!!(modal$ | async)?.hasControls"
+        class="lk-modal_footer"
+      >
+        <div class="row">
+          <div
+            *ngIf="!!(modal$ | async)?.cancelButton"
+            class="col-xxs-12 col-xs-6"
+          >
+            <button
+              type="button"
+              class="lk-brand-btn btn-subtle"
+              (click)="hide()"
+            >{{ (modal$ | async)?.cancelButton }}</button>
+          </div>
+
+          <div
+            *ngIf="!!(modal$ | async)?.confirmButton"
+            class="col-xxs-12 col-xs-6"
+          >
+            <div
+              *ngIf="!!(modal$ | async)?.cancelButton"
+              class="v-space-20 visible-xxs"
+            ></div>
+
+            <button
+              type="button"
+              class="lk-brand-btn btn-primary"
+              (click)="hide(true)"
+            >{{ (modal$ | async)?.confirmButton }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="lk-modal_silkscreen"
+    (click)="hide()"
+  ></div>
+</div>

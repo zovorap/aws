@@ -1,0 +1,15 @@
+{
+  "desc": "website info",
+  "security": [],
+  "protected": false,
+  "status": "",
+  "request": {
+	  "url": "string"
+	},
+  "response": {
+    "statusCode": 200,
+    "schema": {
+      "type": "application/json"
+    }
+  }
+}

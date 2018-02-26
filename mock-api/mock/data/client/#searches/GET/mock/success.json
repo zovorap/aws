@@ -1,0 +1,801 @@
+[{
+  "id": 4341,
+  "name": "123",
+  "search": {
+    "searchId": "3923f5b57abb12d2543",
+    "system": {
+      "version": "listings_20171024_194407",
+      "timing": [{
+        "type": "list-page",
+        "ms": 0
+      }]
+    },
+    "criteria": {
+      "provider": {
+        "type": "set",
+        "selected": ["BMAR", "BNYC", "BOND", "CITY", "CORC", "LHUB", "NONE", "PDES", "PRCH", "RBNY", "READ", "REJU", "RLMX", "RPLU", "SOLE", "TOWN", "URCO", "WREI"]
+      },
+      "type": {
+        "type": "set",
+        "selected": ["sale"],
+        "values": ["sale", "rental"]
+      },
+      "propertyType": {
+        "type": "set",
+        "selected": [],
+        "values": ["Co-op", "Commercial", "Condo", "Condop", "Land", "Multi-Family", "Rental Building", "Townhouse/House"]
+      },
+      "status": {
+        "type": "set",
+        "selected": ["Active"],
+        "values": ["Active", "Contract Signed", "Expired", "Pending Approval", "Sold", "TOM 30 Days", "Withdrawn"],
+        "tree": {
+          "Active": ["Active"],
+          "Closed": ["Sold"],
+          "In Contract": ["Contract Signed", "Pending Approval"],
+          "Off-Market": ["Expired", "TOM 30 Days", "Withdrawn"]
+        }
+      },
+      "price": {
+        "type": "number-range",
+        "selected": [null, null],
+        "values": [0, 25000, 50000, 75000, 100000, 125000, 150000, 175000, 200000, 225000, 250000, 275000, 300000, 325000, 350000, 375000, 400000, 425000, 450000, 475000, 500000, 550000, 600000, 650000, 700000, 750000, 800000, 900000, 1000000, 1100000, 1200000, 1300000, 1400000, 1500000, 1600000, 1700000, 1800000, 1900000, 2000000, 2250000, 2500000, 2750000, 3000000, 3250000, 3500000, 3750000, 4000000, 4250000, 4500000, 4750000, 5000000, 5250000, 5500000, 5750000, 6000000, 6250000, 6500000, 6750000, 7000000, 7250000, 7500000, 7750000, 8000000, 8250000, 8500000, 8750000, 9000000, 9250000, 9500000, 9750000, 10000000, 15000000, 20000000, 25000000, 30000000, 35000000, 40000000]
+      },
+      "priceChange": {
+        "type": "set",
+        "selected": [],
+        "values": ["Any", "Any Decrease", "5% Decrease", "10% Decrease", "Any Increase", "5% Increase", "10% Increase"]
+      },
+      "listed": {
+        "type": "date-range",
+        "selected": [null, null],
+        "values": [null, "2017-11-23"]
+      },
+      "closed": {
+        "type": "date-range",
+        "selected": [null, null],
+        "values": [null, "2017-11-23"]
+      },
+      "built": {
+        "type": "number-range",
+        "selected": [null, null],
+        "values": [1817, 2018]
+      },
+      "squareFeet": {
+        "type": "number-range",
+        "selected": [null, null],
+        "values": [0, 500, 750, 1000, 1500, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
+      },
+      "bedrooms": {
+        "type": "set",
+        "selected": [],
+        "values": ["Studio", "1 Bed", "2 Beds", "3 Beds", "4 Beds", "5+ Beds"]
+      },
+      "bathrooms": {
+        "type": "number-range",
+        "selected": [null, null],
+        "values": [1, null]
+      },
+      "hasPhotosOnly": {
+        "type": "set",
+        "selected": false
+      },
+      "point": {
+        "type": "geo-point",
+        "selected": null
+      },
+      "zip": {
+        "type": "autocomplete",
+        "selected": []
+      },
+      "identity": {
+        "type": "autocomplete",
+        "selected": []
+      },
+      "buildingName": {
+        "type": "autocomplete",
+        "selected": []
+      },
+      "amenities": {
+        "type": "set",
+        "selected": [],
+        "values": ["Doorman", "Fireplace", "Furnished", "Garage", "New Construction", "Pets Allowed"]
+      },
+      "description": {
+        "selected": null
+      },
+      "openHousesOnly": {
+        "type": "set",
+        "selected": null
+      },
+      "neighborhood": {
+        "tree": [{
+          "id": 5,
+          "label": "Other New York Areas"
+        }, {
+          "id": 391,
+          "label": "Manhattan",
+          "children": [{
+            "id": 2859,
+            "label": "Upper Manhattan",
+            "children": [{
+              "id": 2626,
+              "label": "East Harlem"
+            }, {
+              "id": 2632,
+              "label": "Hamilton Heights"
+            }, {
+              "id": 2634,
+              "label": "Inwood"
+            }, {
+              "id": 2651,
+              "label": "Washington Heights"
+            }, {
+              "id": 2864,
+              "label": "Central Harlem"
+            }]
+          }, {
+            "id": 2860,
+            "label": "Upper West Side",
+            "children": [{
+              "id": 2636,
+              "label": "Lincoln Center"
+            }, {
+              "id": 2640,
+              "label": "Morningside Heights"
+            }, {
+              "id": 2876,
+              "label": "Upper West Side"
+            }]
+          }, {
+            "id": 2861,
+            "label": "Upper East Side",
+            "children": [{
+              "id": 2623,
+              "label": "Carnegie Hill"
+            }, {
+              "id": 2635,
+              "label": "Lenox Hill"
+            }, {
+              "id": 2644,
+              "label": "Upper East Side"
+            }, {
+              "id": 2646,
+              "label": "Roosevelt Island"
+            }, {
+              "id": 2653,
+              "label": "Yorkville"
+            }]
+          }, {
+            "id": 2862,
+            "label": "Midtown",
+            "children": [{
+              "id": 2638,
+              "label": "Midtown East"
+            }, {
+              "id": 2639,
+              "label": "Midtown West"
+            }, {
+              "id": 2641,
+              "label": "Murray HIll"
+            }, {
+              "id": 2650,
+              "label": "Turtle Bay"
+            }, {
+              "id": 2868,
+              "label": "Beekman"
+            }, {
+              "id": 2869,
+              "label": "Sutton Place"
+            }, {
+              "id": 2870,
+              "label": "Hell's Kitchen"
+            }, {
+              "id": 2871,
+              "label": "Hudson Yards"
+            }]
+          }, {
+            "id": 2863,
+            "label": "Downtown",
+            "children": [{
+              "id": 2620,
+              "label": "Battery Park City"
+            }, {
+              "id": 2625,
+              "label": "Chelsea"
+            }, {
+              "id": 2627,
+              "label": "East Village"
+            }, {
+              "id": 2628,
+              "label": "Financial District"
+            }, {
+              "id": 2629,
+              "label": "Flatiron"
+            }, {
+              "id": 2630,
+              "label": "Gramercy Park"
+            }, {
+              "id": 2631,
+              "label": "Greenwich Village"
+            }, {
+              "id": 2637,
+              "label": "Lower East Side"
+            }, {
+              "id": 2642,
+              "label": "Noho"
+            }, {
+              "id": 2643,
+              "label": "Nolita / Little Italy"
+            }, {
+              "id": 2647,
+              "label": "Soho"
+            }, {
+              "id": 2648,
+              "label": "Stuyvesant Town / Peter Cooper Village"
+            }, {
+              "id": 2649,
+              "label": "Tribeca"
+            }, {
+              "id": 2652,
+              "label": "West Village"
+            }, {
+              "id": 2872,
+              "label": "West Chelsea"
+            }, {
+              "id": 2873,
+              "label": "Kips Bay"
+            }, {
+              "id": 2874,
+              "label": "NoMad"
+            }, {
+              "id": 2875,
+              "label": "Hudson Square"
+            }]
+          }]
+        }, {
+          "id": 432,
+          "label": "Brooklyn",
+          "children": [{
+            "id": 2654,
+            "label": "Bath Beach"
+          }, {
+            "id": 2655,
+            "label": "Bay Ridge"
+          }, {
+            "id": 2656,
+            "label": "Bedford - Stuyvesant"
+          }, {
+            "id": 2657,
+            "label": "Bensonhurst"
+          }, {
+            "id": 2658,
+            "label": "Bergen Beach"
+          }, {
+            "id": 2659,
+            "label": "Boerum Hill"
+          }, {
+            "id": 2660,
+            "label": "Borough Park"
+          }, {
+            "id": 2661,
+            "label": "Brighton Beach"
+          }, {
+            "id": 2662,
+            "label": "Brooklyn Heights"
+          }, {
+            "id": 2663,
+            "label": "Brownsville"
+          }, {
+            "id": 2664,
+            "label": "Bushwick"
+          }, {
+            "id": 2665,
+            "label": "Canarsie"
+          }, {
+            "id": 2666,
+            "label": "Carroll Gardens"
+          }, {
+            "id": 2667,
+            "label": "City Line"
+          }, {
+            "id": 2668,
+            "label": "Clinton Hill"
+          }, {
+            "id": 2669,
+            "label": "Cobble Hill"
+          }, {
+            "id": 2670,
+            "label": "Columbia Waterfront"
+          }, {
+            "id": 2671,
+            "label": "Coney Island"
+          }, {
+            "id": 2672,
+            "label": "Crown Heights"
+          }, {
+            "id": 2673,
+            "label": "Cypress Hills"
+          }, {
+            "id": 2674,
+            "label": "Ditmas Park"
+          }, {
+            "id": 2675,
+            "label": "Downtown"
+          }, {
+            "id": 2676,
+            "label": "DUMBO"
+          }, {
+            "id": 2677,
+            "label": "Dyker Heights"
+          }, {
+            "id": 2678,
+            "label": "East Flatbush"
+          }, {
+            "id": 2679,
+            "label": "East New York"
+          }, {
+            "id": 2680,
+            "label": "East Williamsburg"
+          }, {
+            "id": 2681,
+            "label": "Flatbush"
+          }, {
+            "id": 2682,
+            "label": "Flatlands"
+          }, {
+            "id": 2683,
+            "label": "Fort Greene"
+          }, {
+            "id": 2684,
+            "label": "Fort Hamilton"
+          }, {
+            "id": 2685,
+            "label": "Gerritsen Beach"
+          }, {
+            "id": 2686,
+            "label": "Gowanus"
+          }, {
+            "id": 2687,
+            "label": "Gravesend"
+          }, {
+            "id": 2688,
+            "label": "Greenpoint"
+          }, {
+            "id": 2689,
+            "label": "Greenwood"
+          }, {
+            "id": 2690,
+            "label": "Kensington"
+          }, {
+            "id": 2691,
+            "label": "Manhattan Beach"
+          }, {
+            "id": 2692,
+            "label": "Mapleton"
+          }, {
+            "id": 2693,
+            "label": "Marine Park"
+          }, {
+            "id": 2694,
+            "label": "Midwood"
+          }, {
+            "id": 2695,
+            "label": "Mill Basin"
+          }, {
+            "id": 2696,
+            "label": "Navy Yard"
+          }, {
+            "id": 2697,
+            "label": "New Lots"
+          }, {
+            "id": 2698,
+            "label": "Park Slope"
+          }, {
+            "id": 2699,
+            "label": "Prospect Heights"
+          }, {
+            "id": 2700,
+            "label": "Prospect-Lefferts Gardens"
+          }, {
+            "id": 2701,
+            "label": "Red Hook"
+          }, {
+            "id": 2702,
+            "label": "Sea Gate"
+          }, {
+            "id": 2703,
+            "label": "Sheapshead Bay"
+          }, {
+            "id": 2704,
+            "label": "Spring Creek"
+          }, {
+            "id": 2705,
+            "label": "Starrett City"
+          }, {
+            "id": 2706,
+            "label": "Sunset Park"
+          }, {
+            "id": 2707,
+            "label": "Vinegar Hill"
+          }, {
+            "id": 2708,
+            "label": "Williamsburg - Northside"
+          }, {
+            "id": 2709,
+            "label": "Williamsburg - South Side"
+          }, {
+            "id": 2710,
+            "label": "Windsor Terrace"
+          }]
+        }, {
+          "id": 453,
+          "label": "Queens",
+          "children": [{
+            "id": 2711,
+            "label": "Arverne"
+          }, {
+            "id": 2712,
+            "label": "Astoria"
+          }, {
+            "id": 2713,
+            "label": "Astoria Heights"
+          }, {
+            "id": 2714,
+            "label": "Auburndale"
+          }, {
+            "id": 2715,
+            "label": "Bay Terrace"
+          }, {
+            "id": 2716,
+            "label": "Bayside"
+          }, {
+            "id": 2717,
+            "label": "Bayswater"
+          }, {
+            "id": 2718,
+            "label": "Belle Harbor"
+          }, {
+            "id": 2719,
+            "label": "Breezy Point"
+          }, {
+            "id": 2720,
+            "label": "Briarwood"
+          }, {
+            "id": 2721,
+            "label": "Broad Channel"
+          }, {
+            "id": 2722,
+            "label": "Brookville"
+          }, {
+            "id": 2723,
+            "label": "Cambria Heights"
+          }, {
+            "id": 2724,
+            "label": "College Point"
+          }, {
+            "id": 2725,
+            "label": "Corona"
+          }, {
+            "id": 2726,
+            "label": "Ditmars"
+          }, {
+            "id": 2727,
+            "label": "Douglaston"
+          }, {
+            "id": 2728,
+            "label": "East Elmhurst"
+          }, {
+            "id": 2729,
+            "label": "Edgemere"
+          }, {
+            "id": 2730,
+            "label": "Elmhurst"
+          }, {
+            "id": 2731,
+            "label": "Far Rockaway"
+          }, {
+            "id": 2732,
+            "label": "Floral Park"
+          }, {
+            "id": 2733,
+            "label": "Flushing"
+          }, {
+            "id": 2734,
+            "label": "Forest Hills"
+          }, {
+            "id": 2735,
+            "label": "Glen Oaks"
+          }, {
+            "id": 2736,
+            "label": "Glendale"
+          }, {
+            "id": 2737,
+            "label": "Hammels"
+          }, {
+            "id": 2738,
+            "label": "Hillcrest"
+          }, {
+            "id": 2739,
+            "label": "Hollis"
+          }, {
+            "id": 2740,
+            "label": "Hollis Hills"
+          }, {
+            "id": 2741,
+            "label": "Holliswood"
+          }, {
+            "id": 2742,
+            "label": "Howard Beach"
+          }, {
+            "id": 2743,
+            "label": "Jackson Heights"
+          }, {
+            "id": 2744,
+            "label": "Jamaica Center"
+          }, {
+            "id": 2745,
+            "label": "Jamaica Estates"
+          }, {
+            "id": 2746,
+            "label": "Jamaica Hills"
+          }, {
+            "id": 2747,
+            "label": "Kew Gardens"
+          }, {
+            "id": 2748,
+            "label": "Laurelton"
+          }, {
+            "id": 2749,
+            "label": "Linden Hill"
+          }, {
+            "id": 2750,
+            "label": "Little Neck"
+          }, {
+            "id": 2751,
+            "label": "Locust Manor"
+          }, {
+            "id": 2752,
+            "label": "Long Island City"
+          }, {
+            "id": 2753,
+            "label": "Malba"
+          }, {
+            "id": 2754,
+            "label": "Maspeth"
+          }, {
+            "id": 2755,
+            "label": "Middle Village"
+          }, {
+            "id": 2756,
+            "label": "Neponsit"
+          }, {
+            "id": 2757,
+            "label": "Nkew Gardens"
+          }, {
+            "id": 2758,
+            "label": "Oakland Gardens"
+          }, {
+            "id": 2759,
+            "label": "Ozone Park"
+          }, {
+            "id": 2760,
+            "label": "Queens Village"
+          }, {
+            "id": 2761,
+            "label": "Rego Park"
+          }, {
+            "id": 2762,
+            "label": "Richmond Hill"
+          }, {
+            "id": 2763,
+            "label": "Ridgewood"
+          }, {
+            "id": 2764,
+            "label": "Rockaway Park"
+          }, {
+            "id": 2765,
+            "label": "Rosedale"
+          }, {
+            "id": 2766,
+            "label": "Roxbury"
+          }, {
+            "id": 2767,
+            "label": "Seaside"
+          }, {
+            "id": 2768,
+            "label": "South Jamaica"
+          }, {
+            "id": 2769,
+            "label": "South Ozone Park"
+          }, {
+            "id": 2770,
+            "label": "Springfield Gardens"
+          }, {
+            "id": 2771,
+            "label": "St. Albans"
+          }, {
+            "id": 2772,
+            "label": "Sunnyside"
+          }, {
+            "id": 2773,
+            "label": "Fresh Meadows"
+          }, {
+            "id": 2774,
+            "label": "Utopia"
+          }, {
+            "id": 2775,
+            "label": "Whitestone"
+          }, {
+            "id": 2776,
+            "label": "Willets Point"
+          }, {
+            "id": 2777,
+            "label": "Woodhaven"
+          }, {
+            "id": 2778,
+            "label": "Woodside"
+          }]
+        }, {
+          "id": 455,
+          "label": "Bronx",
+          "children": [{
+            "id": 2779,
+            "label": "Baychester"
+          }, {
+            "id": 2780,
+            "label": "Bedford Park"
+          }, {
+            "id": 2781,
+            "label": "City Island"
+          }, {
+            "id": 2782,
+            "label": "Country Club"
+          }, {
+            "id": 2783,
+            "label": "Fordham"
+          }, {
+            "id": 2784,
+            "label": "High Bridge"
+          }, {
+            "id": 2785,
+            "label": "Hunts Point"
+          }, {
+            "id": 2786,
+            "label": "Kings Bridge"
+          }, {
+            "id": 2787,
+            "label": "Morris Heights"
+          }, {
+            "id": 2788,
+            "label": "Morris Park"
+          }, {
+            "id": 2789,
+            "label": "Mott Haven"
+          }, {
+            "id": 2790,
+            "label": "Parkchester"
+          }, {
+            "id": 2791,
+            "label": "Riverdale"
+          }, {
+            "id": 2792,
+            "label": "Soundview"
+          }, {
+            "id": 2793,
+            "label": "South Bronx"
+          }, {
+            "id": 2794,
+            "label": "Spuyten Duyvil"
+          }, {
+            "id": 2795,
+            "label": "Throggs Neck"
+          }, {
+            "id": 2796,
+            "label": "Tremont"
+          }, {
+            "id": 2797,
+            "label": "Union Port"
+          }, {
+            "id": 2798,
+            "label": "University Heights"
+          }, {
+            "id": 2799,
+            "label": "Wakefield-Williamsbridge"
+          }, {
+            "id": 2800,
+            "label": "Williams Bridge"
+          }, {
+            "id": 2801,
+            "label": "Woodlawn-Nordwood"
+          }]
+        }, {
+          "id": 2595,
+          "label": "Staten Island",
+          "children": [{
+            "id": 2596,
+            "label": "Annandale"
+          }, {
+            "id": 2597,
+            "label": "Ardon Heights"
+          }, {
+            "id": 2598,
+            "label": "Bloomfield-Chelsea-Travis"
+          }, {
+            "id": 2599,
+            "label": "Charlestown-Richmond Valley"
+          }, {
+            "id": 2600,
+            "label": "Clifton"
+          }, {
+            "id": 2601,
+            "label": "Eltingville"
+          }, {
+            "id": 2602,
+            "label": "Fresh Kills"
+          }, {
+            "id": 2603,
+            "label": "Great Kills"
+          }, {
+            "id": 2604,
+            "label": "Howland Hook"
+          }, {
+            "id": 2605,
+            "label": "Huguenot"
+          }, {
+            "id": 2606,
+            "label": "Mariners Harbor"
+          }, {
+            "id": 2607,
+            "label": "Midland Beach"
+          }, {
+            "id": 2608,
+            "label": "New Brighton"
+          }, {
+            "id": 2609,
+            "label": "Oakwood"
+          }, {
+            "id": 2610,
+            "label": "Port Richmond"
+          }, {
+            "id": 2611,
+            "label": "Prince's Bay"
+          }, {
+            "id": 2612,
+            "label": "Richmondtown"
+          }, {
+            "id": 2613,
+            "label": "Rosebank"
+          }, {
+            "id": 2614,
+            "label": "Rossville"
+          }, {
+            "id": 2615,
+            "label": "South Beach"
+          }, {
+            "id": 2616,
+            "label": "Todt Hill"
+          }, {
+            "id": 2617,
+            "label": "Tottensville"
+          }, {
+            "id": 2618,
+            "label": "Westerleigh-Castleton"
+          }, {
+            "id": 2619,
+            "label": "Woodrow"
+          }]
+        }],
+        "type": "set",
+        "selected": []
+      }
+    },
+    "sort": {
+      "selected": ["listed:desc"],
+      "values": ["listed:desc", "closed:desc", "price:asc", "price:desc", "closedPrice:desc", "score:desc", "point:asc", "status:asc"]
+    },
+    "pagination": {
+      "totalResults": 6531
+    }
+  }
+}]

@@ -1,0 +1,26 @@
+<div
+  class="lk-toastr"
+  [ngClass]="!!(toast$ | async)?.isActive? 'is-active' : ''"
+>
+  <div
+    class="lk-toastr_box cf"
+    [ngClass]="!!(toast$ | async)? ('is-' + (toast$ | async).type) : ''"
+  >
+    <div
+      class="lk-close"
+      (click)="hide()"
+    ></div>
+
+    <h4
+      *ngIf="!!(toast$ | async)?.title"
+      class="lk-toastr_title"
+    >
+      {{ (toast$ | async).title }}
+      <br>
+    </h4>
+
+    <p class="lk-toastr_message">
+      {{ (toast$ | async)?.message }}
+    </p>
+  </div>
+</div>

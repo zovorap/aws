@@ -1,0 +1,17 @@
+{
+  "name": "mock-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "node node_modules/node-mock-server/init",
+    "start": "node mock",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-mock-server": "^0.18.1"
+  }
+}

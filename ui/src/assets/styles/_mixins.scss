@@ -1,0 +1,65 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+@mixin make-custom-grid($i: 1, $list: ".col-xxs-#{$i}") {
+  @for $i from (1) through $grid-columns {
+    $list: "#{$list}, .col-xss-#{$i}";
+
+    .col-xxs-#{$i} {
+      @media (max-width: $screen-xs) {
+        float: left;
+        width: percentage(($i / $grid-columns));
+      }
+    }
+  }
+
+  #{$list} {
+    position: relative;
+    min-height: 1px;
+    padding-left: ceil(($grid-gutter-width / 2));
+    padding-right: floor(($grid-gutter-width / 2));
+  }
+
+  @for $i from 0 through 11 {
+    .col-xxs-offset-#{$i} {
+      @media (max-width: $screen-xs) {
+        margin-left: percentage(($i / $grid-columns));
+      }
+    }
+  }
+
+  .visible-xxs {
+    @media (min-width: $screen-xxs-max) {
+      display: none;
+    }
+
+    @media (max-width: $screen-xxs-max) {
+      display: block !important;
+    }
+  }
+
+  .hidden-xxs {
+    display: block !important;
+
+    @media (max-width: $screen-xxs-max) {
+      display: none !important;
+    }
+  }
+}
+
+@mixin lk-transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+}
+
+@mixin lk-transform($string) {
+  -webkit-transform: $string;
+  -moz-transform: $string;
+  -ms-transform: $string;
+  -o-transform: $string;
+}
+
+@mixin lk-box-shadow() {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .2);
+}

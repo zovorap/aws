@@ -1,0 +1,106 @@
+<footer
+  class="lk-footer"
+  [ngClass]="cssClasses"
+  [ngStyle]="{
+    color: textColor
+  }"
+>
+  <div class="container">
+    <div class="lk-footer_content">
+      <div class="row">
+        <div
+          *ngIf="footerLayout === 'a'"
+          class="col-md-3"
+        >
+          <a
+            *ngIf="isLogoVisible()"
+            class="lk-footer_logo"
+            routerLink=""
+            [title]="siteName$ | async"
+          >
+            <img
+              [alt]="siteName$ | async"
+              [src]="(agent$ | async).agencyLogo"
+            />
+          </a>
+        </div>
+
+        <div
+          [ngClass]="{
+            'col-md-6': footerLayout === 'a',
+            'col-md-9': footerLayout !== 'a'
+          }"
+        >
+          <h2 class="lk-footer_site-name">
+            <a
+              routerLink=""
+              [title]="siteName$ | async"
+            >{{ siteName$ | async }}</a>
+          </h2>
+
+          <div *ngIf="footerLayout === 'a'">
+            <div class="lk-footer_phone">
+              <i class="fa fa-phone"></i>
+              {{ (agent$ | async).mainPhoneNumber }}
+            </div>
+
+            <div class="lk-footer_email lk-brand-text">
+              {{ (agent$ | async).displayEmail }}
+            </div>
+
+            <div class="v-space-10">&nbsp;</div>
+          </div>
+
+          <ul
+            *ngIf="!!agencies?.length"
+            class="lk-footer_agencies row"
+          >
+            <li
+              *ngFor="let agency of agencies"
+              [ngClass]="agencyCssClass"
+              class="lk-footer_agency col-sm-4"
+            >
+              <h4 class="lk-footer_agency_name">{{ agency.name }}</h4>
+              <span class="lk-footer_agency_address">{{ agency.address }}</span>
+              <span class="lk-footer_agency_phone">
+                <i class="fa fa-phone"></i>{{ agency.phone }}
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <ul
+            *ngIf="!!socialMedia?.length"
+            class="lk-footer_social lk-brand-text"
+          >
+            <li *ngFor="let sm of socialMedia">
+              <a
+                [href]="sm.link"
+                target="_blank"
+              >
+                <i
+                  class="fa"
+                  [ngClass]="'fa-' + sm.type"
+                >&nbsp;</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="lk-footer_disclaimer">
+        {{ disclaimer$ | async }}
+      </p>
+
+      <div class="lk-footer_equal-housing">
+        <img
+          src="assets/images/equal-housing-opportunity.png"
+          alt="Equal Housing Opportunity"
+        >
+
+        <span>An equal housing opportunity</span>
+      </div>
+    </div>
+  </div>
+</footer>
